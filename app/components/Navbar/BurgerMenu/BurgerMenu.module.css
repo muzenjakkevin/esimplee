@@ -1,0 +1,85 @@
+.menuButton {
+    cursor: pointer;
+    display: inline-block;
+}
+
+.menuButton button {
+  background-color: transparent;
+  border: none;
+}
+
+.menuIcon {
+    width: 30px;
+    height: 1px;
+    background-color: var(--primary-text-color); /* Changed from #09090b to always be white */
+    margin: 8px 0;
+}
+
+.closeIcon {
+    position: relative;
+    width: 30px; /* Adjust to match menuIcon */
+    height: 30px; /* Adjust to make the close icon square */
+    z-index: 99999;
+}
+
+.crossLine {
+    position: absolute;
+    width: 30px; 
+    height: 1px;
+    background-color: var(--primary-text-color); /* Keep the close icon white since it's always on dark background */
+}
+
+.crossLine:nth-child(1) {
+    transform: rotate(45deg);
+    top: 50%; 
+    left: 0;
+}
+
+.crossLine:nth-child(2) {
+    transform: rotate(-45deg); 
+    top: 50%; 
+    left: 0;
+}
+
+.menu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 16px;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in-out;
+    z-index: 1;
+}
+
+.menu.open {
+    transform: translateX(0);
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+.menu.scrolled {
+    background: rgba(0, 0, 0,0.5);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+.menuItem {
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 20px;
+    margin: 20px 0;
+}
+
+/*.menuItem:hover {
+    color: #f39c12;
+}*/
+  

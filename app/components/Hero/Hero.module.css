@@ -1,0 +1,52 @@
+.heroContainer {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    background-color: var(--primary-color);
+}
+
+.heroContainer::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 250px;
+    background: linear-gradient(
+        to bottom,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(255, 255, 255, 0.25) 25%,
+        rgba(255, 255, 255, 0.5) 50%,
+        rgba(255, 255, 255, 0.75) 75%,
+        rgba(255, 255, 255, 1) 100%
+    );
+    pointer-events: none;
+}
+
+.heroImage {
+    width: 100%;
+    height: 600px;
+    object-fit: cover;
+    object-position: center 70%;
+}
+
+.landingPage {
+    object-position: unset;
+}
+
+.heroLogo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 220px;
+}
+
+.heroContent {
+    padding: 3.2rem 1.6rem;
+    max-width: 1024px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}

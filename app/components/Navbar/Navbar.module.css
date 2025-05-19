@@ -1,0 +1,36 @@
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    padding: 16px 32px;
+    transition: 0.3s ease;
+    background: linear-gradient(
+        to bottom,
+        rgba(255, 255, 255, 1) 0%,
+        rgba(255, 255, 255, 0.75) 25%,
+        rgba(255, 255, 255, 0.5) 50%,
+        rgba(255, 255, 255, 0.25) 75%,
+        var(--primary-color) 100%
+    );
+}
+
+.header.scrolled {
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+.header.menuOpen {
+    transition: none;
+}
+
+.navbar {
+    display: flex;
+}
+
+.navbarDesktop {
+    max-width: 1024px;
+    margin: auto;
+}
