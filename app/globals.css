@@ -27,13 +27,3 @@ a {
   color: var(--primary-text-color);
   text-decoration: none;
 }
-
-/* General utility classes */
-.container {
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 1rem;
-}
-
-/* Add more general styles as needed */
