@@ -60,13 +60,13 @@
 
 .menu.open {
     transform: translateX(0);
-    background: rgba(255, 255, 255, 0.9);
+    background: rgba(241, 240, 251, 0.9);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
 }
 
 .menu.scrolled {
-    background: rgba(255, 255, 255, 0.9);
+    background: rgba(241, 240, 251, 0.9);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
 }
@@ -78,8 +78,3 @@
     font-size: 20px;
     margin: 20px 0;
 }
-
-/*.menuItem:hover {
-    color: #f39c12;
-}*/
-  
