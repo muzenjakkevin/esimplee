@@ -52,6 +52,11 @@
     gap: 1rem;
 }
 
+.heroContent h1 {
+    font-size: 3rem;
+}
+
+
 .heroContent h1 span:last-child,
 .heroContent p span:last-child {
     color: var(--primary-text-color);

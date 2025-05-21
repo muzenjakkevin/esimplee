@@ -1,0 +1,77 @@
+.services {
+    background-color: var(--background-color);
+}
+
+.servicesContainer {
+    max-width: 1024px;
+    margin: 0 auto;
+    padding: 3.2rem 1.6rem;
+}
+
+.servicesContainer h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.servicesContent {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    flex-direction: row;
+    gap: 2rem;
+}
+
+@media (max-width: 1023px) {
+    .servicesContent {
+        justify-content: space-around;
+    }
+}
+
+.service {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    width: 300px;
+    padding: 1rem;
+    border: 1px solid var(--primary-text-color);
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.service:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.service .icon {
+    color: var(--primary-text-color);
+}
+
+.service h3 {
+    font-size: 1.5rem;
+    color: var(--primary-text-color);
+}
+
+.service p {
+    font-size: 1rem;
+    line-height: 1.6;
+    text-align: center;
+}
+
+.serviceFeatures {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    list-style-type: none;
+}
+
+.feature {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
