@@ -1,0 +1,181 @@
+.customers {
+  padding: 3.2rem 1.6rem;
+  background-color: var(--primary-color);
+  overflow: hidden;
+}
+
+.container {
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 16px;
+  color: var(--text-color);
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.title.titleVisible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  text-align: center;
+  color: #666;
+  margin-bottom: 60px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  transition-delay: 0.2s;
+}
+
+.subtitle.subtitleVisible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.carouselContainer {
+  position: relative;
+  overflow: hidden;
+  mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    black 10%,
+    black 90%,
+    transparent 100%
+  );
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    black 10%,
+    black 90%,
+    transparent 100%
+  );
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  transition-delay: 0.4s;
+}
+
+.carouselContainer.carouselVisible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.carousel {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+  animation: scroll calc(var(--items-count, 8) * 4s) linear infinite;
+  width: fit-content;
+}
+
+.customerLink {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  min-width: 180px;
+  height: 100px;
+  text-decoration: none;
+}
+
+.customerLink:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.customerLogo {
+  max-width: 140px;
+  max-height: 60px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  filter: grayscale(100%);
+  opacity: 0.7;
+  transition: all 0.3s ease;
+}
+
+.customerLink:hover .customerLogo {
+  filter: grayscale(0%);
+  opacity: 1;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Pause animation on hover */
+.carouselContainer:hover .carousel {
+  animation-play-state: paused;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .customers {
+    padding: 60px 0;
+  }
+  
+  .title {
+    font-size: 2rem;
+  }
+  
+  .subtitle {
+    font-size: 1rem;
+    margin-bottom: 40px;
+  }
+  
+  .carousel {
+    gap: 40px;
+    animation-duration: 25s;
+  }
+  
+  .customerLink {
+    min-width: 140px;
+    height: 80px;
+    padding: 15px;
+  }
+  
+  .customerLogo {
+    max-width: 110px;
+    max-height: 50px;
+  }
+}
+
+@media (max-width: 480px) {
+  .carousel {
+    gap: 30px;
+    animation-duration: 20s;
+  }
+  
+  .customerLink {
+    min-width: 120px;
+    height: 70px;
+    padding: 12px;
+  }
+  
+  .customerLogo {
+    max-width: 90px;
+    max-height: 40px;
+  }
+}
