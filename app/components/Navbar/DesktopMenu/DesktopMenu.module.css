@@ -12,7 +12,7 @@
 .desktopMenu a {
     font-size: 17px;
     padding: 16px;
-    text-transform: uppercase;
+    text-transform: lowercase;
 }
 
 .desktopMenu a:hover {

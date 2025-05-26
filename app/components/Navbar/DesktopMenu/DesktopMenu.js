@@ -19,11 +19,11 @@ export default function DesktopMenu() {
         <Link href="/" passHref>
           <span className={styles.menuItem}>Hem</span>
         </Link>
-        <Link href="https://www.blocket.se/butik/vidmarks-bil-ab" passHref target='_blank'>
-          <span className={styles.menuItem}>Våra bilar</span>
-        </Link>
         <Link href="/pages/tjanster" passHref>
           <span className={styles.menuItem}>Tjänster</span>
+        </Link>
+        <Link href="https://www.blocket.se/butik/vidmarks-bil-ab" passHref target='_blank'>
+          <span className={styles.menuItem}>FAQ</span>
         </Link>
         <Link href="/pages/kontakta-oss" passHref>
           <span className={styles.menuItem}>Kontakta oss</span>

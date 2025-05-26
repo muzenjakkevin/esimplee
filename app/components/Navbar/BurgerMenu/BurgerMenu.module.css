@@ -63,6 +63,8 @@
     background: rgba(241, 240, 251, 0.9);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
+    overflow-y: auto; /* Allow scrolling within the menu if needed */
+    -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
 }
 
 .menu.scrolled {
@@ -74,7 +76,13 @@
 .menuItem {
     color: var(--primary-text-color);
     text-decoration: none;
-    text-transform: uppercase;
+    text-transform: lowercase;
     font-size: 20px;
     margin: 20px 0;
+}
+
+/* Add this new class */
+.noScroll {
+    overflow: hidden;
+    height: 100vh;
 }

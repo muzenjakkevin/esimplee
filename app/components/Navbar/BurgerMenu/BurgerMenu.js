@@ -9,18 +9,30 @@ const BurgerMenu = ({ isScrolled, onMenuToggle }) => {
   const [open, setOpen] = useState(false);
   const menuRef = useRef(null);
   const buttonRef = useRef(null);
+  const scrollPosition = useRef(0);
 
-  // Handle body scroll lock
+  // Update the scroll lock effect
   useEffect(() => {
     if (open) {
-      document.body.style.overflow = 'hidden';
+      // Store the current scroll position
+      scrollPosition.current = window.scrollY;
+      // Apply the fixed position to body
+      document.body.style.position = 'fixed';
+      document.body.style.top = `-${scrollPosition.current}px`;
+      document.body.style.width = '100%';
     } else {
-      document.body.style.overflow = 'unset';
+      // Restore the scroll position
+      document.body.style.position = '';
+      document.body.style.top = '';
+      document.body.style.width = '';
+      window.scrollTo(0, scrollPosition.current);
     }
     
     // Cleanup function
     return () => {
-      document.body.style.overflow = 'unset';
+      document.body.style.position = '';
+      document.body.style.top = '';
+      document.body.style.width = '';
     };
   }, [open]);
 
@@ -95,11 +107,11 @@ const BurgerMenu = ({ isScrolled, onMenuToggle }) => {
         <Link href="/" passHref>
           <span className={styles.menuItem} onClick={toggleMenu}>Hem</span>
         </Link>
-        <Link href="https://www.blocket.se/butik/vidmarks-bil-ab" passHref target='_blank'>
-          <span className={styles.menuItem} onClick={toggleMenu}>Våra bilar</span>
-        </Link>
         <Link href="/pages/tjanster" passHref>
           <span className={styles.menuItem} onClick={toggleMenu}>Tjänster</span>
+        </Link>
+        <Link href="https://www.blocket.se/butik/vidmarks-bil-ab" passHref target='_blank'>
+          <span className={styles.menuItem} onClick={toggleMenu}>FAQ</span>
         </Link>
         <Link href="/pages/kontakta-oss" passHref>
           <span className={styles.menuItem} onClick={toggleMenu}>Kontakta oss</span>

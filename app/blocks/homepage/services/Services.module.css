@@ -42,6 +42,12 @@
     transition: all 0.3s ease;
 }
 
+@media (max-width: 768px) {
+    .service {
+        width: 100%;
+    }
+}
+
 .service:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
