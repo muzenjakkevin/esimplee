@@ -31,7 +31,6 @@
 .subtitle {
   font-size: 1.125rem;
   color: var(--text-color);
-  max-width: 600px;
   line-height: 1.6;
   opacity: 0;
   transform: translateY(30px);
@@ -161,9 +160,6 @@
 
 /* Mobile Responsiveness */
 @media (max-width: 768px) {
-  .faqSection {
-    padding: 60px 0;
-  }
   
   .container {
     padding: 0 16px;
