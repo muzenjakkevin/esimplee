@@ -8,6 +8,12 @@
     padding: 3.2rem 1.6rem;
 }
 
+@media (min-width: 769px) {
+    .servicesContainer {
+        padding: 6.4rem 1.6rem;
+    }
+}
+
 .title {
     font-size: 2.5rem;
     font-weight: 700;
